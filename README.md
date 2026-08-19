@@ -1,7 +1,5 @@
 # Football Stats Bot — Часть 1
 
-Реализовано из вашего списка:
-
 1. **Производные метрики per-90** (`data_processor.py`): `gls_90`, `ast_90`,
    `g_plus_a_90`, `int_90`, `tklw_90`, `crs_90`. В исходном CSV нет xG/xA —
    использованы реальные доступные метрики (голы, передачи, удары,
@@ -29,19 +27,6 @@ football_bot/
 └── requirements.txt
 ```
 
-## Запуск
-
-```bash
-pip install -r requirements.txt
-
-export TELEGRAM_BOT_TOKEN="ваш_токен_от_BotFather"
-export FOOTBALL_CSV_PATH="/путь/к/football_stats.csv"   # по умолчанию ./football_stats.csv
-
-python telegram_bot.py
-```
-
-В Colab/Jupyter поддержка `nest_asyncio` сохранена как в исходном коде.
-
 ## Важные технические заметки
 
 - **kaleido закреплён на версии `0.2.1`** — более новые версии (`>=1.0`)
@@ -60,7 +45,7 @@ python telegram_bot.py
   в топ-N по умолчанию (иначе один гол за 20 минут выбивался бы в топ-1
   по gls_90). Можно поменять в конструкторе `FootballDataProcessor`.
 
-## Часть 2 (готово)
+## Часть 2
 
 1. **Scatter «Голы vs эффективность»** — `Gls` против `SoT%` или `G/Sh`.
    Точки выше среднего по обеим осям (пунктирные линии) — игроки, которые
